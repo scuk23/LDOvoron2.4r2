@@ -1948,3 +1948,217 @@
 [02/20/23 16:13:45] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue...
 [02/20/23 16:13:46] crowsnest: Starting ustreamer with Device /dev/video0 ...
 [02/20/23 16:13:47] crowsnest: ... Done!
+[02/20/23 16:49:14] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[02/20/23 16:49:14] crowsnest: Version: v3.0.7-2-ga5a36e5
+[02/20/23 16:49:14] crowsnest: Prepare Startup ...
+[02/20/23 16:49:15] crowsnest: INFO: Host information:
+[02/20/23 16:49:15] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[02/20/23 16:49:15] crowsnest: Host Info: Kernel: Linux 5.15.84-v8+ aarch64
+[02/20/23 16:49:15] crowsnest: Host Info: Model: Raspberry Pi 4 Model B Rev 1.5
+[02/20/23 16:49:15] crowsnest: Host Info: Available CPU Cores: 4
+[02/20/23 16:49:15] crowsnest: Host Info: Available Memory: 3705552 kB
+[02/20/23 16:49:15] crowsnest: Host Info: Diskspace (avail. / total): 51G / 59G
+[02/20/23 16:49:15] crowsnest: INFO: Checking Dependencys
+[02/20/23 16:49:15] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[02/20/23 16:49:15] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[02/20/23 16:49:16] crowsnest: Dependency: 'logger' found in /usr/bin/logger.
+[02/20/23 16:49:16] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[02/20/23 16:49:16] crowsnest: Dependency: 'ffmpeg' found in /usr/bin/ffmpeg.
+[02/20/23 16:49:16] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[02/20/23 16:49:16] crowsnest: Dependency: 'rtsp-simple-server' found in bin/rtsp-simple-server/rtsp-simple-server.
+[02/20/23 16:49:16] crowsnest: Version Control: ustreamer new version available: v5.37-2-gf6ec0ad (v5.37).
+[02/20/23 16:49:16] crowsnest: Version Control: rtsp-simple-server is up to date. (v0.20.2)
+[02/20/23 16:49:18] crowsnest: Version Control: ffmpeg is up to date. (4.3.5-0+deb11u1+rpt3)
+[02/20/23 16:49:18] crowsnest: INFO: Print Configfile: '/home/pi/printer_data/config/crowsnest.conf'
+[02/20/23 16:49:18] crowsnest: 		[crowsnest]
+[02/20/23 16:49:18] crowsnest: 		log_path: ~/klipper_logs/crowsnest.log
+[02/20/23 16:49:18] crowsnest: 		log_level: verbose
+[02/20/23 16:49:18] crowsnest: 		delete_log: false
+[02/20/23 16:49:18] crowsnest: 		
+[02/20/23 16:49:18] crowsnest: 		[cam 1]
+[02/20/23 16:49:18] crowsnest: 		mode: mjpg
+[02/20/23 16:49:18] crowsnest: 		port: 8080
+[02/20/23 16:49:18] crowsnest: 		device: /dev/video0
+[02/20/23 16:49:18] crowsnest: 		resolution: 1920x1080
+[02/20/23 16:49:18] crowsnest: 		max_fps: 15
+[02/20/23 16:49:18] crowsnest: 		custom_flags: -q 100
+[02/20/23 16:49:18] crowsnest: 		v4l2ctl: focus_auto=0,focus_absolute=30
+[02/20/23 16:49:19] crowsnest: INFO: Detect available Devices
+[02/20/23 16:49:19] crowsnest: INFO: Found 1 total available Device(s)
+[02/20/23 16:49:19] crowsnest: Detected 'Raspicam' Device -> /dev/video0
+[02/20/23 16:49:19] crowsnest: Supported Formats:
+[02/20/23 16:49:19] crowsnest: 		[0]: 'YU12' (Planar YUV 4:2:0)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[1]: 'YUYV' (YUYV 4:2:2)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[2]: 'RGB3' (24-bit RGB 8-8-8)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[3]: 'JPEG' (JFIF JPEG, compressed)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[4]: 'H264' (H.264, compressed)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[5]: 'MJPG' (Motion-JPEG, compressed)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[6]: 'YVYU' (YVYU 4:2:2)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[7]: 'VYUY' (VYUY 4:2:2)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[8]: 'UYVY' (UYVY 4:2:2)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[9]: 'NV12' (Y/CbCr 4:2:0)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[10]: 'BGR3' (24-bit BGR 8-8-8)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[11]: 'YV12' (Planar YVU 4:2:0)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[12]: 'NV21' (Y/CrCb 4:2:0)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: 		[13]: 'RX24' (32-bit XBGR 8-8-8-8)
+[02/20/23 16:49:19] crowsnest: 		Size: Stepwise 32x32 - 3280x2464 with step 2/2
+[02/20/23 16:49:19] crowsnest: Supported Controls:
+[02/20/23 16:49:19] crowsnest: 		
+[02/20/23 16:49:19] crowsnest: 		User Controls
+[02/20/23 16:49:19] crowsnest: 		
+[02/20/23 16:49:19] crowsnest: 		brightness 0x00980900 (int) : min=0 max=100 step=1 default=50 value=50 flags=slider
+[02/20/23 16:49:19] crowsnest: 		contrast 0x00980901 (int) : min=-100 max=100 step=1 default=0 value=0 flags=slider
+[02/20/23 16:49:19] crowsnest: 		saturation 0x00980902 (int) : min=-100 max=100 step=1 default=0 value=0 flags=slider
+[02/20/23 16:49:19] crowsnest: 		red_balance 0x0098090e (int) : min=1 max=7999 step=1 default=1000 value=1000 flags=slider
+[02/20/23 16:49:19] crowsnest: 		blue_balance 0x0098090f (int) : min=1 max=7999 step=1 default=1000 value=1000 flags=slider
+[02/20/23 16:49:19] crowsnest: 		horizontal_flip 0x00980914 (bool) : default=0 value=0
+[02/20/23 16:49:19] crowsnest: 		vertical_flip 0x00980915 (bool) : default=0 value=0
+[02/20/23 16:49:19] crowsnest: 		power_line_frequency 0x00980918 (menu) : min=0 max=3 default=1 value=1
+[02/20/23 16:49:19] crowsnest: 		0: Disabled
+[02/20/23 16:49:19] crowsnest: 		1: 50 Hz
+[02/20/23 16:49:19] crowsnest: 		2: 60 Hz
+[02/20/23 16:49:19] crowsnest: 		3: Auto
+[02/20/23 16:49:19] crowsnest: 		sharpness 0x0098091b (int) : min=-100 max=100 step=1 default=0 value=0 flags=slider
+[02/20/23 16:49:19] crowsnest: 		color_effects 0x0098091f (menu) : min=0 max=15 default=0 value=0
+[02/20/23 16:49:19] crowsnest: 		0: None
+[02/20/23 16:49:19] crowsnest: 		1: Black & White
+[02/20/23 16:49:19] crowsnest: 		2: Sepia
+[02/20/23 16:49:19] crowsnest: 		3: Negative
+[02/20/23 16:49:19] crowsnest: 		4: Emboss
+[02/20/23 16:49:19] crowsnest: 		5: Sketch
+[02/20/23 16:49:19] crowsnest: 		6: Sky Blue
+[02/20/23 16:49:19] crowsnest: 		7: Grass Green
+[02/20/23 16:49:19] crowsnest: 		8: Skin Whiten
+[02/20/23 16:49:19] crowsnest: 		9: Vivid
+[02/20/23 16:49:19] crowsnest: 		10: Aqua
+[02/20/23 16:49:20] crowsnest: 		11: Art Freeze
+[02/20/23 16:49:20] crowsnest: 		12: Silhouette
+[02/20/23 16:49:20] crowsnest: 		13: Solarization
+[02/20/23 16:49:20] crowsnest: 		14: Antique
+[02/20/23 16:49:20] crowsnest: 		15: Set Cb/Cr
+[02/20/23 16:49:20] crowsnest: 		rotate 0x00980922 (int) : min=0 max=360 step=90 default=0 value=0 flags=modify-layout
+[02/20/23 16:49:20] crowsnest: 		color_effects_cbcr 0x0098092a (int) : min=0 max=65535 step=1 default=32896 value=32896
+[02/20/23 16:49:20] crowsnest: 		
+[02/20/23 16:49:20] crowsnest: 		Codec Controls
+[02/20/23 16:49:20] crowsnest: 		
+[02/20/23 16:49:20] crowsnest: 		video_bitrate_mode 0x009909ce (menu) : min=0 max=1 default=0 value=0 flags=update
+[02/20/23 16:49:20] crowsnest: 		0: Variable Bitrate
+[02/20/23 16:49:20] crowsnest: 		1: Constant Bitrate
+[02/20/23 16:49:20] crowsnest: 		video_bitrate 0x009909cf (int) : min=25000 max=25000000 step=25000 default=10000000 value=10000000
+[02/20/23 16:49:20] crowsnest: 		repeat_sequence_header 0x009909e2 (bool) : default=0 value=0
+[02/20/23 16:49:20] crowsnest: 		force_key_frame 0x009909e5 (button) : flags=write-only, execute-on-write
+[02/20/23 16:49:20] crowsnest: 		h264_minimum_qp_value 0x00990a61 (int) : min=0 max=51 step=1 default=0 value=0
+[02/20/23 16:49:20] crowsnest: 		h264_maximum_qp_value 0x00990a62 (int) : min=0 max=51 step=1 default=0 value=0
+[02/20/23 16:49:20] crowsnest: 		h264_i_frame_period 0x00990a66 (int) : min=0 max=2147483647 step=1 default=60 value=60
+[02/20/23 16:49:20] crowsnest: 		h264_level 0x00990a67 (menu) : min=0 max=13 default=11 value=11
+[02/20/23 16:49:20] crowsnest: 		0: 1
+[02/20/23 16:49:20] crowsnest: 		1: 1b
+[02/20/23 16:49:20] crowsnest: 		2: 1.1
+[02/20/23 16:49:20] crowsnest: 		3: 1.2
+[02/20/23 16:49:20] crowsnest: 		4: 1.3
+[02/20/23 16:49:20] crowsnest: 		5: 2
+[02/20/23 16:49:20] crowsnest: 		6: 2.1
+[02/20/23 16:49:20] crowsnest: 		7: 2.2
+[02/20/23 16:49:20] crowsnest: 		8: 3
+[02/20/23 16:49:20] crowsnest: 		9: 3.1
+[02/20/23 16:49:20] crowsnest: 		10: 3.2
+[02/20/23 16:49:20] crowsnest: 		11: 4
+[02/20/23 16:49:20] crowsnest: 		12: 4.1
+[02/20/23 16:49:20] crowsnest: 		13: 4.2
+[02/20/23 16:49:20] crowsnest: 		h264_profile 0x00990a6b (menu) : min=0 max=4 default=4 value=4
+[02/20/23 16:49:20] crowsnest: 		0: Baseline
+[02/20/23 16:49:20] crowsnest: 		1: Constrained Baseline
+[02/20/23 16:49:20] crowsnest: 		2: Main
+[02/20/23 16:49:20] crowsnest: 		4: High
+[02/20/23 16:49:20] crowsnest: 		
+[02/20/23 16:49:20] crowsnest: 		Camera Controls
+[02/20/23 16:49:20] crowsnest: 		
+[02/20/23 16:49:20] crowsnest: 		auto_exposure 0x009a0901 (menu) : min=0 max=3 default=0 value=0
+[02/20/23 16:49:20] crowsnest: 		0: Auto Mode
+[02/20/23 16:49:20] crowsnest: 		1: Manual Mode
+[02/20/23 16:49:20] crowsnest: 		exposure_time_absolute 0x009a0902 (int) : min=1 max=10000 step=1 default=1000 value=1000
+[02/20/23 16:49:20] crowsnest: 		exposure_dynamic_framerate 0x009a0903 (bool) : default=0 value=0
+[02/20/23 16:49:20] crowsnest: 		auto_exposure_bias 0x009a0913 (intmenu): min=0 max=24 default=12 value=12
+[02/20/23 16:49:20] crowsnest: 		0: -4000 (0xfffffffffffff060)
+[02/20/23 16:49:20] crowsnest: 		1: -3667 (0xfffffffffffff1ad)
+[02/20/23 16:49:20] crowsnest: 		2: -3333 (0xfffffffffffff2fb)
+[02/20/23 16:49:20] crowsnest: 		3: -3000 (0xfffffffffffff448)
+[02/20/23 16:49:20] crowsnest: 		4: -2667 (0xfffffffffffff595)
+[02/20/23 16:49:20] crowsnest: 		5: -2333 (0xfffffffffffff6e3)
+[02/20/23 16:49:20] crowsnest: 		6: -2000 (0xfffffffffffff830)
+[02/20/23 16:49:20] crowsnest: 		7: -1667 (0xfffffffffffff97d)
+[02/20/23 16:49:20] crowsnest: 		8: -1333 (0xfffffffffffffacb)
+[02/20/23 16:49:20] crowsnest: 		9: -1000 (0xfffffffffffffc18)
+[02/20/23 16:49:20] crowsnest: 		10: -667 (0xfffffffffffffd65)
+[02/20/23 16:49:20] crowsnest: 		11: -333 (0xfffffffffffffeb3)
+[02/20/23 16:49:20] crowsnest: 		12: 0 (0x0)
+[02/20/23 16:49:20] crowsnest: 		13: 333 (0x14d)
+[02/20/23 16:49:20] crowsnest: 		14: 667 (0x29b)
+[02/20/23 16:49:20] crowsnest: 		15: 1000 (0x3e8)
+[02/20/23 16:49:20] crowsnest: 		16: 1333 (0x535)
+[02/20/23 16:49:20] crowsnest: 		17: 1667 (0x683)
+[02/20/23 16:49:20] crowsnest: 		18: 2000 (0x7d0)
+[02/20/23 16:49:21] crowsnest: 		19: 2333 (0x91d)
+[02/20/23 16:49:21] crowsnest: 		20: 2667 (0xa6b)
+[02/20/23 16:49:21] crowsnest: 		21: 3000 (0xbb8)
+[02/20/23 16:49:21] crowsnest: 		22: 3333 (0xd05)
+[02/20/23 16:49:21] crowsnest: 		23: 3667 (0xe53)
+[02/20/23 16:49:21] crowsnest: 		24: 4000 (0xfa0)
+[02/20/23 16:49:21] crowsnest: 		white_balance_auto_preset 0x009a0914 (menu) : min=0 max=10 default=1 value=1
+[02/20/23 16:49:21] crowsnest: 		0: Manual
+[02/20/23 16:49:21] crowsnest: 		1: Auto
+[02/20/23 16:49:21] crowsnest: 		2: Incandescent
+[02/20/23 16:49:21] crowsnest: 		3: Fluorescent
+[02/20/23 16:49:21] crowsnest: 		4: Fluorescent H
+[02/20/23 16:49:21] crowsnest: 		5: Horizon
+[02/20/23 16:49:21] crowsnest: 		6: Daylight
+[02/20/23 16:49:21] crowsnest: 		7: Flash
+[02/20/23 16:49:21] crowsnest: 		8: Cloudy
+[02/20/23 16:49:21] crowsnest: 		9: Shade
+[02/20/23 16:49:21] crowsnest: 		10: Greyworld
+[02/20/23 16:49:21] crowsnest: 		image_stabilization 0x009a0916 (bool) : default=0 value=0
+[02/20/23 16:49:21] crowsnest: 		iso_sensitivity 0x009a0917 (intmenu): min=0 max=4 default=0 value=0
+[02/20/23 16:49:21] crowsnest: 		0: 0 (0x0)
+[02/20/23 16:49:21] crowsnest: 		1: 100000 (0x186a0)
+[02/20/23 16:49:21] crowsnest: 		2: 200000 (0x30d40)
+[02/20/23 16:49:21] crowsnest: 		3: 400000 (0x61a80)
+[02/20/23 16:49:21] crowsnest: 		4: 800000 (0xc3500)
+[02/20/23 16:49:21] crowsnest: 		iso_sensitivity_auto 0x009a0918 (menu) : min=0 max=1 default=1 value=1
+[02/20/23 16:49:21] crowsnest: 		0: Manual
+[02/20/23 16:49:21] crowsnest: 		1: Auto
+[02/20/23 16:49:21] crowsnest: 		exposure_metering_mode 0x009a0919 (menu) : min=0 max=3 default=0 value=0
+[02/20/23 16:49:21] crowsnest: 		0: Average
+[02/20/23 16:49:21] crowsnest: 		1: Center Weighted
+[02/20/23 16:49:21] crowsnest: 		2: Spot
+[02/20/23 16:49:21] crowsnest: 		3: Matrix
+[02/20/23 16:49:21] crowsnest: 		scene_mode 0x009a091a (menu) : min=0 max=13 default=0 value=0
+[02/20/23 16:49:21] crowsnest: 		0: None
+[02/20/23 16:49:21] crowsnest: 		8: Night
+[02/20/23 16:49:21] crowsnest: 		11: Sports
+[02/20/23 16:49:21] crowsnest: 		
+[02/20/23 16:49:21] crowsnest: 		JPEG Compression Controls
+[02/20/23 16:49:21] crowsnest: 		
+[02/20/23 16:49:21] crowsnest: 		compression_quality 0x009d0903 (int) : min=1 max=100 step=1 default=30 value=30
+[02/20/23 16:49:21] crowsnest: INFO: No usable CSI Devices found.
+[02/20/23 16:49:22] crowsnest: V4L2 Control: Device: [cam 1]
+[02/20/23 16:49:22] crowsnest: V4L2 Control: Options: focus_auto=0,focus_absolute=30
+[02/20/23 16:49:22] crowsnest: Parameter 'focus_auto=0' not available for '/dev/video0'. Skipped.
+[02/20/23 16:49:22] crowsnest: Parameter 'focus_absolute=30' not available for '/dev/video0'. Skipped.
+[02/20/23 16:49:22] crowsnest: INFO: Blockyfix: Setting video_bitrate_mode to constant.
+[02/20/23 16:49:22] crowsnest: Try to start configured Cams / Services...
+[02/20/23 16:49:23] crowsnest: INFO: Configuration of Section [cam 1] looks good. Continue...
+[02/20/23 16:49:24] crowsnest: Starting ustreamer with Device /dev/video0 ...
+[02/20/23 16:49:25] crowsnest: ... Done!

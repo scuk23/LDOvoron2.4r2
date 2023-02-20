@@ -22,3 +22,20 @@ sudo service klipper start
 sudo usermod -a -G tty pi
 sudo raspi-config
 ./kiauh/kiauh.sh
+git init
+git config --global user.name "scuk23"
+git config --global user.email "contactjakep@gmail.com"
+git remote add origin https://scuk23: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@https://github.com/scuk23/LDOvoron2.4r2
+git add .
+git commit -m "Initial backup"
+git push -u origin master
+git remote add origin https://scuk23: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@github.com/scuk23/LDOvoron2.4r2
+git commit -m "Initial backup"
+git push -u origin master
+git remote add origin https://scuk23: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@github.com/scuk23/LDOvoron2.4r2
+git push -u origin master
+git remote -v
+git remote set-url origin https://scuk23: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@github.com/scuk23/LDOvoron2.4r2https://scuk23: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@github.com/scuk23/LDOvoron2.4r2
+git push -u origin master
+git remote set-url origin https://scuk23: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@github.com/scuk23/LDOvoron2.4r2
+git push -u origin master

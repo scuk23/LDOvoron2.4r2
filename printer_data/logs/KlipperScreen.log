@@ -1657,3 +1657,107 @@ test_stream_delay = False
 2023-02-20 16:13:46,946 [printer.py:init_temp_store()] - Temp store: ['temperature_fan raspberry_pi', 'heater_bed', 'temperature_sensor chamber', 'extruder']
 2023-02-20 16:13:46,958 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/server/config
 2023-02-20 16:13:46,959 [screen.py:init_tempstore()] - Temperature store size: 1200
+--------------------KlipperScreen Log Start--------------------
+Git Version: v0.3.1-28-gd6693fb
+2023-02-20 16:49:20,305 [screen.py:main()] - KlipperScreen version: v0.3.1-28-gd6693fb
+2023-02-20 16:49:20,446 [config.py:get_config_file_location()] - Passed config (-c): /home/pi/KlipperScreen.conf
+2023-02-20 16:49:20,447 [config.py:__init__()] - Config path location: /home/pi/printer_data/config/KlipperScreen.conf
+2023-02-20 16:49:20,462 [config.py:log_config()] -  ===== Config File =====
+[printer Voron 2.4r2]
+z_babystep_values = 0.01, 0.05
+titlebar_items = chamber, raspberry_pi
+titlebar_name_type = short
+
+[preheat ABS]
+extruder = 245
+heater_bed = 110
+chamber_temp = 50
+gcode = 
+	G90
+	G1 X23 Y348.5 Z10 F5000
+	SET_IDLE_TIMEOUT TIMEOUT=5400
+=======================
+2023-02-20 16:49:20,464 [config.py:__init__()] - ====== Saved Def ======
+
+[main]
+theme = material-dark
+screen_blanking = off
+24htime = False
+confirm_estop = True
+print_sort_dir = date_desc
+
+[displayed_macros Printer]
+test_stream_delay = False
+timelapse_render = False
+timelapse_take_frame = False
+
+[displayed_macros Voron 2.4r2]
+hyperlapse = False
+get_timelapse_setup = False
+probe_calibrate = False
+timelapse_render = False
+pause = False
+resume = False
+timelapse_take_frame = False
+test_stream_delay = False
+
+=======================
+2023-02-20 16:49:20,465 [config.py:__init__()] - Configuration validated succesfuly
+2023-02-20 16:49:20,466 [config.py:__init__()] - Configured printers: [
+  {
+    "Voron 2.4r2": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_api_key": ""
+    }
+  }
+]
+2023-02-20 16:49:20,532 [config.py:create_translations()] - Selected lang: None OS lang: en_GB
+2023-02-20 16:49:20,532 [config.py:install_language()] - Using system lang
+2023-02-20 16:49:20,533 [config.py:install_language()] - Using lang en
+2023-02-20 16:49:20,540 [screen.py:__init__()] - Screen resolution: 800x480
+2023-02-20 16:49:20,541 [KlippyGtk.py:__init__()] - Font size: 16.6 (medium)
+2023-02-20 16:49:21,126 [screen.py:set_screenblanking_timeout()] - Screen blanking: off
+2023-02-20 16:49:21,133 [screen.py:initial_connection()] - Default printer: None
+2023-02-20 16:49:21,133 [screen.py:connect_printer()] - Connecting to printer: Voron 2.4r2
+2023-02-20 16:49:21,134 [screen.py:_load_panel()] - Loading panel: splash_screen
+2023-02-20 16:49:21,134 [screen.py:_load_panel()] - Panel path: /home/pi/KlipperScreen/panels/splash_screen.py
+2023-02-20 16:49:21,179 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2023-02-20 16:49:21,203 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/server/info
+2023-02-20 16:49:21,214 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/access/oneshot_token
+2023-02-20 16:49:21,215 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2023-02-20 16:49:21,224 [_logging.py:info()] - Websocket connected
+2023-02-20 16:49:21,225 [KlippyWebsocket.py:on_open()] - Moonraker Websocket Open
+2023-02-20 16:49:21,248 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/server/info
+2023-02-20 16:49:21,248 [base_panel.py:set_ks_printer_cfg()] - Titlebar name type: short items: ['chamber', 'raspberry_pi']
+2023-02-20 16:49:21,268 [KlippyRest.py:send_request()] - 404 Client Error>>Not Found for url>>http://127.0.0.1:7125/machine/device_power/devices
+2023-02-20 16:49:21,280 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/printer/info
+2023-02-20 16:49:21,422 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/printer/objects/query?configfile
+2023-02-20 16:49:21,426 [printer.py:reinit()] - Klipper version: v0.11.0-111-g848a78d1
+2023-02-20 16:49:21,426 [printer.py:reinit()] - # Extruders: 1
+2023-02-20 16:49:21,426 [printer.py:reinit()] - # Temperature devices: 3
+2023-02-20 16:49:21,426 [printer.py:reinit()] - # Fans: 4
+2023-02-20 16:49:21,426 [printer.py:reinit()] - # Output pins: 1
+2023-02-20 16:49:21,427 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2023-02-20 16:49:21,723 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/printer/objects/query?bed_mesh&configfile&display_status&extruder&fan&gcode_move&heater_bed&idle_timeout&pause_resume&print_stats&toolhead&virtual_sdcard&webhooks&motion_report&firmware_retraction&exclude_object&extruder&heater_bed&temperature_sensor chamber&temperature_fan raspberry_pi&fan&controller_fan controller_fan&heater_fan hotend_fan&heater_fan exhaust_fan&output_pin caselight
+2023-02-20 16:49:21,738 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/server/temperature_store
+2023-02-20 16:49:21,756 [printer.py:init_temp_store()] - Temp store: ['temperature_fan raspberry_pi', 'heater_bed', 'temperature_sensor chamber', 'extruder']
+2023-02-20 16:49:21,771 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/server/config
+2023-02-20 16:49:21,772 [screen.py:init_tempstore()] - Temperature store size: 1200
+2023-02-20 16:49:21,772 [files.py:initialize()] - Gcodes path: /home/pi/printer_data/gcodes
+2023-02-20 16:49:21,772 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2023-02-20 16:49:21,773 [screen.py:init_printer()] - Printer initialized
+2023-02-20 16:49:22,165 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2023-02-20 16:49:22,165 [printer.py:change_state()] - Adding callback for state: ready
+2023-02-20 16:49:22,167 [screen.py:_load_panel()] - Loading panel: main_menu
+2023-02-20 16:49:22,168 [screen.py:_load_panel()] - Panel path: /home/pi/KlipperScreen/panels/main_menu.py
+2023-02-20 16:49:22,179 [main_menu.py:initialize()] - ### Making MainMenu
+2023-02-20 16:49:22,231 [main_menu.py:add_device()] - Adding device: extruder
+2023-02-20 16:49:22,237 [main_menu.py:add_device()] - Adding device: heater_bed
+2023-02-20 16:49:22,242 [main_menu.py:add_device()] - Adding device: temperature_sensor chamber
+2023-02-20 16:49:22,247 [main_menu.py:add_device()] - Adding device: temperature_fan raspberry_pi
+2023-02-20 16:49:22,265 [screen.py:attach_panel()] - Current panel hierarchy: main_panel
+2023-02-20 16:49:23,740 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/server/temperature_store
+2023-02-20 16:49:23,754 [printer.py:init_temp_store()] - Temp store: ['temperature_fan raspberry_pi', 'heater_bed', 'temperature_sensor chamber', 'extruder']
+2023-02-20 16:49:23,767 [KlippyRest.py:send_request()] - Sending request to http://127.0.0.1:7125/server/config
+2023-02-20 16:49:23,767 [screen.py:init_tempstore()] - Temperature store size: 1200
