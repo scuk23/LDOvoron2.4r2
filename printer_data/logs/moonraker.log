@@ -15233,3 +15233,7 @@ Properties:
 2023-02-20 17:04:17,720 [websockets.py:open()] - Websocket Opened: ID: 548586185344, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36, Host Name: 10.27.27.36
 2023-02-20 17:04:17,724 [websockets.py:_handle_identify()] - Websocket 548586185344 Client Identified - Name: mainsail, Version: 2.5.0-beta1, Type: web
 2023-02-20 17:06:24,375 [app.py:log_request()] - 201 POST /server/files/upload (10.27.27.33) [_TRUSTED_USER_] 21.52ms
+2023-02-20 17:18:50,311 [websockets.py:on_close()] - Websocket Closed: ID: 548586185344 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 2.59
+2023-02-20 17:18:50,506 [app.py:log_request()] - 101 GET /websocket (10.27.27.33) [_TRUSTED_USER_] 5.82ms
+2023-02-20 17:18:50,507 [websockets.py:open()] - Websocket Opened: ID: 548559180848, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36, Host Name: 10.27.27.36
+2023-02-20 17:18:50,514 [websockets.py:_handle_identify()] - Websocket 548559180848 Client Identified - Name: mainsail, Version: 2.5.0-beta1, Type: web
