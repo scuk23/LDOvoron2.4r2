@@ -39,3 +39,4 @@ git remote set-url origin https://scuk23:ghp_OR0CMoSpYQ2BgukHCJ9NvC2SrtyrbA0U32j
 git push -u origin master
 git remote set-url origin https://scuk23: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@github.com/scuk23/LDOvoron2.4r2
 git push -u origin master
+sudo raspi-config
