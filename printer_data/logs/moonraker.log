@@ -14691,3 +14691,4 @@ Properties:
 2023-02-20 16:49:25,861 [app.py:log_request()] - 101 GET /websocket (10.27.27.33) [_TRUSTED_USER_] 2.87ms
 2023-02-20 16:49:25,862 [websockets.py:open()] - Websocket Opened: ID: 548023071360, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36, Host Name: 10.27.27.36
 2023-02-20 16:49:25,867 [websockets.py:_handle_identify()] - Websocket 548023071360 Client Identified - Name: mainsail, Version: 2.5.0-beta1, Type: web
+2023-02-20 16:51:47,123 [app.py:log_request()] - 201 POST /server/files/upload (10.27.27.33) [_TRUSTED_USER_] 23.66ms
