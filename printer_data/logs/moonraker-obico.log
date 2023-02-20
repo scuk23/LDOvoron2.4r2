@@ -1,0 +1,167 @@
+2023-02-20 14:48:46,911   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:48:48,916   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:48:50,922   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:48:52,926   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:48:54,930   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:48:56,936   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:48:58,943   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:00,949   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:02,955   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:04,961   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:06,967   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:08,973   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:10,978   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:12,985   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:14,991   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:16,997   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:19,003   WARNING  obico.app - auth_token not configured. Retry after 2s
+2023-02-20 14:49:21,337      INFO  obico.app - Fetching linked printer...
+2023-02-20 14:49:21,501      INFO  obico.app - starting moonraker-obico (v1.2.0)
+2023-02-20 14:49:21,501      INFO  obico.app - Linked printer: {'is_pro': True, 'id': 117704, 'name': 'Voron 2.4r2'}
+2023-02-20 14:49:21,605      INFO  obico.app - Starting webcam streamer
+2023-02-20 14:49:21,616   WARNING  obico.moonraker_conn - api key is unset, trying to fetch one
+2023-02-20 14:49:21,641     ERROR  obico.utils - 
+Traceback (most recent call last):
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_stream.py", line 98, in video_pipeline
+    self.ffmpeg_from_mjpeg()
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_stream.py", line 132, in ffmpeg_from_mjpeg
+    encoder = h264_encoder()
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_stream.py", line 126, in h264_encoder
+    ffmpeg_test_proc = psutil.Popen(ffmpeg_cmd.split(' '), stdout=FNULL, stderr=FNULL)
+  File "/home/pi/moonraker-env/lib/python3.9/site-packages/psutil/__init__.py", line 1319, in __init__
+    self.__subproc = subprocess.Popen(*args, **kwargs)
+  File "/usr/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.9/subprocess.py", line 1823, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pi/moonraker-obico/moonraker_obico/bin/rpi_os.11/32bits/ffmpeg'
+2023-02-20 14:49:21,653      INFO  obico.moonraker_conn - connection is open
+2023-02-20 14:49:21,666      INFO  backoff - Backing off run_janus(...) for 0.2s (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:49:21,672      INFO  backoff - Backing off wait_for_klippy_ready(...) for 0.5s (False)
+2023-02-20 14:49:21,792      INFO  backoff - Backing off capture_jpeg(...) for 0.5s (None)
+2023-02-20 14:49:21,854      INFO  backoff - Backing off run_janus(...) for 1.0s (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:49:22,181      INFO  backoff - Backing off wait_for_klippy_ready(...) for 1.0s (False)
+2023-02-20 14:49:22,340      INFO  backoff - Backing off capture_jpeg(...) for 1.0s (None)
+2023-02-20 14:49:22,646      INFO  backoff - Backing off wait_for_janus(...) for 0.1s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:49:22,908      INFO  backoff - Backing off run_janus(...) for 0.9s (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:49:23,156      INFO  backoff - Backing off wait_for_klippy_ready(...) for 0.4s (False)
+2023-02-20 14:49:23,376     ERROR  backoff - Giving up capture_jpeg(...) after 3 tries (None)
+2023-02-20 14:49:23,558      INFO  backoff - Backing off wait_for_klippy_ready(...) for 4.0s (False)
+2023-02-20 14:49:23,573     ERROR  obico.utils - 
+Traceback (most recent call last):
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_capture.py", line 116, in pic_post_loop
+    self.post_pic_to_server(viewing_boost=True)
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_capture.py", line 105, in post_pic_to_server
+    resp = self.server_conn.send_http_request('POST', '/api/v1/octo/pic/', timeout=60, files=files, data=data, raise_exception=True)
+  File "/home/pi/moonraker-obico/moonraker_obico/server_conn.py", line 146, in send_http_request
+    resp.raise_for_status()
+  File "/home/pi/moonraker-env/lib/python3.9/site-packages/requests/models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://app.obico.io/api/v1/octo/pic/
+2023-02-20 14:49:23,706      INFO  backoff - Backing off wait_for_janus(...) for 1.7s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:49:23,800      INFO  backoff - Backing off run_janus(...) for 4.5s (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:49:24,369      INFO  backoff - Backing off capture_jpeg(...) for 0.2s (None)
+2023-02-20 14:49:24,571      INFO  backoff - Backing off capture_jpeg(...) for 1.3s (None)
+2023-02-20 14:49:25,833     ERROR  backoff - Giving up capture_jpeg(...) after 3 tries (None)
+2023-02-20 14:49:26,030     ERROR  obico.utils - 
+Traceback (most recent call last):
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_capture.py", line 116, in pic_post_loop
+    self.post_pic_to_server(viewing_boost=True)
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_capture.py", line 105, in post_pic_to_server
+    resp = self.server_conn.send_http_request('POST', '/api/v1/octo/pic/', timeout=60, files=files, data=data, raise_exception=True)
+  File "/home/pi/moonraker-obico/moonraker_obico/server_conn.py", line 146, in send_http_request
+    resp.raise_for_status()
+  File "/home/pi/moonraker-env/lib/python3.9/site-packages/requests/models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://app.obico.io/api/v1/octo/pic/
+2023-02-20 14:49:26,383      INFO  backoff - Backing off wait_for_janus(...) for 0.2s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:49:27,598      INFO  backoff - Backing off wait_for_janus(...) for 6.8s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:49:27,608      INFO  backoff - Backing off wait_for_klippy_ready(...) for 13.0s (False)
+2023-02-20 14:49:27,953      INFO  backoff - Backing off capture_jpeg(...) for 0.1s (None)
+2023-02-20 14:49:28,030      INFO  backoff - Backing off capture_jpeg(...) for 0.3s (None)
+2023-02-20 14:49:28,289     ERROR  backoff - Giving up capture_jpeg(...) after 3 tries (None)
+2023-02-20 14:49:28,337     ERROR  backoff - Giving up run_janus(...) after 5 tries (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:49:28,339     ERROR  obico.utils - 
+Traceback (most recent call last):
+  File "/home/pi/moonraker-obico/moonraker_obico/janus.py", line 80, in run_janus_forever
+    run_janus()
+  File "/home/pi/moonraker-env/lib/python3.9/site-packages/backoff/_sync.py", line 94, in retry
+    ret = target(*args, **kwargs)
+  File "/home/pi/moonraker-obico/moonraker_obico/janus.py", line 77, in run_janus
+    raise Exception('Janus quit! This should not happen. Exit code: {}'.format(self.janus_proc.returncode))
+Exception: Janus quit! This should not happen. Exit code: 127
+2023-02-20 14:49:28,496     ERROR  obico.utils - 
+Traceback (most recent call last):
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_capture.py", line 116, in pic_post_loop
+    self.post_pic_to_server(viewing_boost=True)
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_capture.py", line 105, in post_pic_to_server
+    resp = self.server_conn.send_http_request('POST', '/api/v1/octo/pic/', timeout=60, files=files, data=data, raise_exception=True)
+  File "/home/pi/moonraker-obico/moonraker_obico/server_conn.py", line 146, in send_http_request
+    resp.raise_for_status()
+  File "/home/pi/moonraker-env/lib/python3.9/site-packages/requests/models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://app.obico.io/api/v1/octo/pic/
+2023-02-20 14:49:35,444      INFO  backoff - Backing off wait_for_janus(...) for 11.0s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:49:40,582      INFO  backoff - Backing off wait_for_klippy_ready(...) for 4.1s (False)
+2023-02-20 14:49:44,647      INFO  backoff - Backing off wait_for_klippy_ready(...) for 40.6s (False)
+2023-02-20 14:49:47,435      INFO  backoff - Backing off wait_for_janus(...) for 23.0s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:50:11,431      INFO  backoff - Backing off wait_for_janus(...) for 61.9s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:50:25,305      INFO  backoff - Backing off wait_for_klippy_ready(...) for 57.1s (False)
+2023-02-20 14:51:14,974      INFO  obico.app - Fetching linked printer...
+2023-02-20 14:51:15,202      INFO  obico.app - starting moonraker-obico (v1.2.0)
+2023-02-20 14:51:15,204      INFO  obico.app - Linked printer: {'is_pro': True, 'id': 117704, 'name': 'Voron 2.4r2'}
+2023-02-20 14:51:21,453      INFO  obico.app - Fetching linked printer...
+2023-02-20 14:51:21,631      INFO  obico.app - starting moonraker-obico (v1.2.0)
+2023-02-20 14:51:21,632      INFO  obico.app - Linked printer: {'is_pro': True, 'id': 117704, 'name': 'Voron 2.4r2'}
+2023-02-20 14:51:21,732      INFO  obico.app - Starting webcam streamer
+2023-02-20 14:51:21,744   WARNING  obico.moonraker_conn - api key is unset, trying to fetch one
+2023-02-20 14:51:21,756     ERROR  obico.utils - 
+Traceback (most recent call last):
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_stream.py", line 98, in video_pipeline
+    self.ffmpeg_from_mjpeg()
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_stream.py", line 132, in ffmpeg_from_mjpeg
+    encoder = h264_encoder()
+  File "/home/pi/moonraker-obico/moonraker_obico/webcam_stream.py", line 126, in h264_encoder
+    ffmpeg_test_proc = psutil.Popen(ffmpeg_cmd.split(' '), stdout=FNULL, stderr=FNULL)
+  File "/home/pi/moonraker-env/lib/python3.9/site-packages/psutil/__init__.py", line 1319, in __init__
+    self.__subproc = subprocess.Popen(*args, **kwargs)
+  File "/usr/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.9/subprocess.py", line 1823, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pi/moonraker-obico/moonraker_obico/bin/rpi_os.11/32bits/ffmpeg'
+2023-02-20 14:51:21,782      INFO  obico.moonraker_conn - connection is open
+2023-02-20 14:51:21,805      INFO  backoff - Backing off run_janus(...) for 0.6s (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:51:21,807      INFO  backoff - Backing off wait_for_klippy_ready(...) for 0.1s (False)
+2023-02-20 14:51:21,937      INFO  backoff - Backing off wait_for_klippy_ready(...) for 1.7s (False)
+2023-02-20 14:51:22,380      INFO  backoff - Backing off run_janus(...) for 0.6s (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:51:22,785      INFO  backoff - Backing off wait_for_janus(...) for 0.4s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:51:23,021      INFO  backoff - Backing off run_janus(...) for 0.6s (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:51:23,636      INFO  backoff - Backing off run_janus(...) for 7.4s (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:51:23,676      INFO  backoff - Backing off wait_for_klippy_ready(...) for 2.6s (False)
+2023-02-20 14:51:24,170      INFO  backoff - Backing off wait_for_janus(...) for 1.2s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:51:26,305      INFO  backoff - Backing off wait_for_klippy_ready(...) for 2.3s (False)
+2023-02-20 14:51:26,399      INFO  backoff - Backing off wait_for_janus(...) for 1.9s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:51:28,654      INFO  backoff - Backing off wait_for_klippy_ready(...) for 8.1s (False)
+2023-02-20 14:51:29,303      INFO  backoff - Backing off wait_for_janus(...) for 1.3s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:51:31,075     ERROR  backoff - Giving up run_janus(...) after 5 tries (Exception: Janus quit! This should not happen. Exit code: 127)
+2023-02-20 14:51:31,078     ERROR  obico.utils - 
+Traceback (most recent call last):
+  File "/home/pi/moonraker-obico/moonraker_obico/janus.py", line 80, in run_janus_forever
+    run_janus()
+  File "/home/pi/moonraker-env/lib/python3.9/site-packages/backoff/_sync.py", line 94, in retry
+    ret = target(*args, **kwargs)
+  File "/home/pi/moonraker-obico/moonraker_obico/janus.py", line 77, in run_janus
+    raise Exception('Janus quit! This should not happen. Exit code: {}'.format(self.janus_proc.returncode))
+Exception: Janus quit! This should not happen. Exit code: 127
+2023-02-20 14:51:31,612      INFO  backoff - Backing off wait_for_janus(...) for 3.5s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:51:36,149      INFO  backoff - Backing off wait_for_janus(...) for 10.3s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:51:36,796      INFO  backoff - Backing off wait_for_klippy_ready(...) for 8.5s (False)
+2023-02-20 14:51:45,301      INFO  backoff - Backing off wait_for_klippy_ready(...) for 31.9s (False)
+2023-02-20 14:51:47,462      INFO  backoff - Backing off wait_for_janus(...) for 22.7s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:52:11,247      INFO  backoff - Backing off wait_for_janus(...) for 95.0s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:52:17,234      INFO  backoff - Backing off wait_for_klippy_ready(...) for 39.0s (False)
+2023-02-20 14:52:56,317      INFO  backoff - Backing off wait_for_klippy_ready(...) for 42.8s (False)
+2023-02-20 14:53:39,204      INFO  backoff - Backing off wait_for_klippy_ready(...) for 38.9s (False)
+2023-02-20 14:53:47,344      INFO  backoff - Backing off wait_for_janus(...) for 198.6s (ConnectionRefusedError: [Errno 111] Connection refused)
+2023-02-20 14:54:18,137      INFO  backoff - Backing off wait_for_klippy_ready(...) for 55.9s (False)
