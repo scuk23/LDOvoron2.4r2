@@ -31092,3 +31092,67 @@ From https://github.com/scuk23/LDOvoron2.4r2
 
 Already up to date.
 
+add 'git_backup.sh'
+add 'klipper_logs/moonraker-obico.log'
+add 'printer_data/logs/klippy.log'
+add 'printer_data/logs/moonraker.log'
+
+[master e3acaf8] Backup triggered on 2023-02-20 16:59:01
+ 4 files changed, 67 insertions(+), 2 deletions(-)
+
+Host key verification failed.
+
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Command {backup_to_github} finished
+
+Running Command {backup_to_github}...:
+grep: /home/pi/.gh_token: No such file or directory
+
+export HOME='/home/pi'
+export INVOCATION_ID='ca871f32e79845cd91963beca3339a20'
+export JOURNAL_STREAM='8:12100'
+export KLIPPER_ARGS='/home/pi/klipper/klippy/klippy.py /home/pi/printer_data/config/printer.cfg -l /home/pi/printer_data/logs/klippy.log -a /tmp/klippy_uds'
+export LANG='en_GB.UTF-8'
+export LOGNAME='pi'
+export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+export PWD='/home/pi/klipper'
+export SHELL='/bin/bash'
+export USER='pi'
+
+Getting klipper version=848a78d
+
+Getting moonraker version=0a811b9
+
+Getting mainsail version=v2.5.0-beta1
+/home/pi/git_backup.sh: 63: cd: can't cd to /home/pi/klipper_config
+Pushing updates
+
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+
+POST git-upload-pack (144 bytes)
+
+From https://github.com/scuk23/LDOvoron2.4r2
+
+ = [up to date]      master        -> origin/master
+
+ = [up to date]      main          -> origin/main
+
+ = [up to date]      master_backup -> origin/master_backup
+
+Already up to date.
+
